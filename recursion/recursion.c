@@ -13,5 +13,5 @@ int main()
 {
    int x = 3; // assigning value 3 to x
    fun(x);    // passing argument to above function
-   return 0; // is to inform the operating system that program has completed its task without any errors
+   return 0;  // is to inform the operating system that program has completed its task without any errors
 }
