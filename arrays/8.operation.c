@@ -39,7 +39,16 @@ int max(struct Array m){
 }
        return max;
 }
-
+//find  the min value in array
+int min(struct Array m){
+    int min=m.A[0];
+    for(int i=0;i<m.length;i++){
+        if(min>m.A[i]){
+            min = m.A[i];
+        }
+    }
+    return min;
+}
 //finding sum of all array values
 int sum(struct Array m){
     int i,sum=0;
@@ -50,20 +59,26 @@ return sum;
 };
 
 // finding average of all array value
-int avg(struct Array m){
-    int i,sum=0,avg;
+float avg(struct Array m){
+    return (float)sum(m)/m.length;
+};
+
+float avg2(struct Array m){
+    int i,sum=0;
+    float avg;
     for(i=0;i<m.length;i++){
         sum = sum + m.A[i];
     }
-    avg = sum/2;
+    avg = (float)sum/m.length;
     return avg;
+   
 };
 
 int main(){
-    struct Array n = {{3,5,7,8,9,55,13,17,19,23},10,10};
+    struct Array n = {{3,5,7,8,9,55,13,17,1,23},10,10};
 //    printf("%d\n", get(n,9)) ;
 //    set(&n,1,9);
-//   printf("%d \n", max(n)) ;
-  printf("%d \n", avg(n) );
+  printf("%d \n", min(n)) ;
+//   printf("%.2f \n", avg2(n) );
 //    display(n);
 };
