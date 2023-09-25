@@ -73,9 +73,6 @@ int multi_miss(struct Array m){
     if(B[i]==0)
       printf("%d ", i);
     }
-
-
-
 };
 
 int main(){
