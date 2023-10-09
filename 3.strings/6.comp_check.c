@@ -1,8 +1,9 @@
 #include<stdio.h>
 
-int main(){
-    char A[] = "AeEau";  
-    char B[] = "aeEger"; 
+//comparing two string
+int compare(){
+    char A[] = "deenu";  
+    char B[] = "deenu"; 
     int i,j;
     for(i=0,j=0;A[i]!='\0',B[j]!='\0';i++,j++){
         if(A[i]>=65 && A[i]<=90){
@@ -16,10 +17,37 @@ int main(){
             break;
         }}
        if(A[i]==B[j]){
-        printf("both are equal");
+        printf("both are equal\n");
        } else if(A[i]>B[j]){
-            printf("a is greater");
+            printf("a is greater\n");
         } else { 
-            printf("b is greater");}
+            printf("b is greater\n");}
+}
+
+
+//checking if palindrome  
+int palindrome(){
+    char word[] = "deed";
+    int i,j;
+    for(j=0;word[j]!='\0';j++){}\
+    j=j-1;
+    for(i=0;i<j;i++,j--){
+        if(word[i]!=word[j]){
+            printf("not palindrome!!!");
+            break;
+        }
+    }
+    if(word[i]==word[j]){
+        printf("palindrome!!!");
+    } 
+
+      
           
+}
+
+int main(){
+    compare();
+    palindrome();
+    return 0;
+
 }
