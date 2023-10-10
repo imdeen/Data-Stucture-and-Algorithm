@@ -39,10 +39,7 @@ int palindrome(){
     }
     if(word[i]==word[j]){
         printf("palindrome!!!");
-    } 
-
-      
-          
+    }      
 }
 
 int main(){
