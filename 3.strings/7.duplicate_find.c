@@ -24,7 +24,6 @@ int multiDuplicates(){
             printf("%c is duplicated %d times\n",i+97,H[i]);
         }
     }
-
 }
 
 int duplicate_bitwise(){
@@ -35,14 +34,10 @@ int duplicate_bitwise(){
     x = x << (A[i]-97);
     if((x & b)>0){
         printf("%c is duplicate\n",A[i]);
-        x = (x & b);
-       
     }else{
         b = (x | b);
     }
-
-   }
-    
+  }
 }
 
 int main(){
