@@ -44,9 +44,36 @@ int anagram_hash(){
 }
 
 //bitwise method
+int anagram_bitwise(){
+    char A[]="tu";
+    char B[]="utz";
+    int a=0,b=0,x=0,i;
+    for(i=0;A[i]!='\0';i++){
+        x=1;
+        x = x << A[i]-97;
+        if(a&x){
+            continue;
+        }else{
+            a = a|x;
+        }
+    }
+    for(i=0;B[i]!='\0';i++){
+        x=1;
+        x = x << B[i]-97;
+        if(a&x){
+            continue;
+        }else{
+            printf("it not an anagram");
+            break;
+        }
+    }
+    if(B[i]=='\0'){
+        printf("its an anagram");
+    }
+}
 
 
 int main(){
-    anagram_hash();
+    anagram_bitwise();
     return 0;
 }
