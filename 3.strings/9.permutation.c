@@ -17,14 +17,15 @@ void perm(char s[],int k){
             }
         }
     }
-
 }
+
 void swap(char *a,char *b){
     char temp;
     temp=*a;
     *a=*b;
     *b=temp;
 }
+
 void perm2(char s[], int l,int h){
     int i;
     if(l==h){
@@ -36,10 +37,10 @@ void perm2(char s[], int l,int h){
         swap(&s[l],&s[i]);
      }
     }
-
 }
+
 int main(){
     char s[]="ABC";
-    perm2(s,0,2);
+    perm(s,0);
     return 0;
 }
